@@ -1,0 +1,41 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  a{
+    text-decoration: none;
+  }
+body{
+   
+    background-color: rgb(21, 21, 22);
+    margin: 0px 0px 0px 0px;
+    color: white;
+}
+
+div{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: Montserrat;
+}
+p{
+    margin: 0px 0px 0px 0px;
+    font-family: Montserrat;
+}
+
+
+.body-container{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* optional: centers the text vertically */
+    gap: 10px; /* nicely controls spacing  */
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+

@@ -1,0 +1,78 @@
+.experience-section {
+    display: flex;
+    align-items: center;
+    margin: 70px 0 40px;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(196, 175, 108);
+}
+
+
+.code-ninjas {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgb(36, 39, 39) url("../Assets/soft-smoke-abstract-background-picjumbo-com.jpeg") center/cover;
+    transition: box-shadow 0.15s;
+}
+
+.code-ninjas:hover {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.title-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cn-date {
+    color: rgb(216, 75, 75);
+}
+
+.cn-logo {
+    width: 300px;
+}
+
+.cn-job-title {
+    color: #199ab1;
+}
+
+.cn-blurb {
+    max-width: 1000px;
+    color: #ffffff;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .code-ninjas {
+        max-width: 100%;
+    }
+
+    .cn-logo {
+        width: 50%;
+    }
+
+    .cn-job-title {
+        font-size: 14px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .cn-date {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .cn-blurb {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .title-date {
+        flex-direction: column;
+        align-items: center;
+    }
+}
