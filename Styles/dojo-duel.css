@@ -1,0 +1,136 @@
+/* Styles for Dojo Duel */
+.dojoDuel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dojo_duel-logo {
+  max-width: 150px;
+}
+
+.dd-title-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dd-logo-name-box {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+}
+
+.dojoDuel-graphic1 {
+  width: 33%;
+}
+
+.dd-title {
+  color: #736ac7;
+}
+
+.dd-youtube-demo-btn {
+  padding: 15px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(214, 73, 73);
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.15s;
+}
+
+.dd-youtube-demo-btn:hover {
+  background-color: rgb(163, 62, 62);
+}
+
+.dd-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dd-screenshots {
+  display: flex;
+  max-width: 1000px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dd-screenshots img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dd-screenshots img:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  .dd-youtube-demo-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .dojo_duel-logo {
+    max-width: 100px;
+  }
+
+  .dd-title {
+    font-size: 20px;
+  }
+
+  .dojoDuel-graphic1 {
+    width: 100%;
+  }
+
+  .dd-screenshots {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  .dd-screenshots img {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    width: 100%;
+    height: auto;
+  }
+
+  .dd-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .left-arrow {
+    left: 5px;
+  }
+
+  .right-arrow {
+    right: 5px;
+  }
+}
+
+/* Hide scrollbars for mobile screenshots */
+.dd-screenshots::-webkit-scrollbar {
+  display: none;
+}
+.dd-screenshots {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

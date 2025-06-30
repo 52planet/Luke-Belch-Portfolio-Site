@@ -67,10 +67,11 @@
 
     .tech-tool {
         gap: 1px;
+        
     }
 
     .sw-icon {
-        width: 18px;
+        width: 10px;
     }
 
     .sw-icon:hover {
@@ -79,7 +80,7 @@
 
     .sw-name {
         margin-right: 10px;
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .express-icon {

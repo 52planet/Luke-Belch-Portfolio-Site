@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="Styles/hello-section.css" />
     <link rel="stylesheet" href="Styles/tools-section.css" />
     <link rel="stylesheet" href="Styles/portfolio-box.css">
+    <link rel="stylesheet" href="Styles/dojo-duel.css">
     <link rel="stylesheet" href="Styles/experience-section.css">
     <link rel="stylesheet" href="Styles/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="Styles/spiritmap.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -243,6 +245,7 @@
                   Also served as MC for Code Ninjas’ Black Belt Ceremony, presenting in front of the minster of education, the mayor, the country manager of Nvidia, and senior leadership from Code Ninjas.</p>
               </div>
             </div>
+            
         </div>
         <div class="portfolio-box" id="projects">
             <div class="portfolio-item-box">
@@ -260,20 +263,55 @@
                         
                     </div>
                     
-                        <h3 class="Spiritmap-tech-stack">Flutter, Dart, Firebase, Google Maps Api, Google ad mob</h3>
-                        <p class="spiritmap-blurb">Explore the supernatural with SpiritMap – the ultimate app for sharing and discovering paranormal experiences! With SpiritMap, users can pin their eerie encounters to interactive maps, creating a captivating tapestry of ghostly tales from around the world. Uncover mysterious occurrences, share your own spine-chilling stories, and connect with a community of fellow paranormal enthusiasts. Navigate through a landscape of user-contributed posts, each marked on the map with chilling precision. Download SpiritMap now and dive into a world where the extraordinary meets the unexplained!</p></div>
-                    
-                        <div class="screenshots">
-                          <img src="Assets/spiritmap/spiritmap_login.jpg" class="spiritmap-graphic1">
-                            <img src="Assets/spiritmap/spiritmap_home.jpg" class="spiritmap-graphic1">
-                            <img src="Assets/spiritmap/spiritmap_map.jpg" class="spiritmap-graphic1">
-                            <img src="Assets/spiritmap/spiritmap_story.jpg" class="spiritmap-graphic1">
-                            <img src="Assets/spiritmap/spiritmap_create.jpg" class="spiritmap-graphic1">
+                        <h3 class="tech-stack">Flutter, Dart, Firebase, Google Maps Api, Google ad mob</h3>
+                        <p class="pi-blurb">Explore the supernatural with SpiritMap – the ultimate app for sharing and discovering paranormal experiences! With SpiritMap, users can pin their eerie encounters to interactive maps, creating a captivating tapestry of ghostly tales from around the world. Uncover mysterious occurrences, share your own spine-chilling stories, and connect with a community of fellow paranormal enthusiasts. Navigate through a landscape of user-contributed posts, each marked on the map with chilling precision. Download SpiritMap now and dive into a world where the extraordinary meets the unexplained!</p></div>
+                    <div class="scroll-wrapper">
+  
+  
+                <div class="sm-screenshots">
+                          <img src="Assets/spiritmap/spiritmap_login.jpg" class="spiritmap-graphic">
+                            <img src="Assets/spiritmap/spiritmap_home.jpg" class="spiritmap-graphic">
+                            <img src="Assets/spiritmap/spiritmap_map.jpg" class="spiritmap-graphic">
+                            <img src="Assets/spiritmap/spiritmap_story.jpg" class="spiritmap-graphic">
+                            <img src="Assets/spiritmap/spiritmap_create.jpg" class="spiritmap-graphic">
                         </div>
+  
+</div>
+                        
 
                         
                 </div>
             </div>
+            <div class="portfolio-item-box">
+                <div class="dojoDuel">
+                    <div class="dd-title-row">
+                        <img src="Assets/Dojo_duel/logo-dd-3.png" class="dojo_duel-logo">
+                        <h1 class="dd-title">DOJO DUEL</h1>
+                        </div>
+                        <div class="dd-row"><h3 class="tech-stack">JavaScript, React, Firebase</h3>
+                        <button class="dd-youtube-demo-btn" onclick="window.open('https://www.youtube.com/watch?v=H2Sj_ZaKnh0', '_blank')">Watch a Demo</button>
+
+                      </div>
+                        
+                        <p class="pi-blurb">Dojo Duel is a web-based quiz game where knowledge is your weapon and mastery is your goal. Players start at white belt and climb the ranks to black belt by earning XP through fast-paced, Kahoot-style duels. Users can join existing duels or create their own using multiple choice, true/false, or short answer questions. To gain an edge, players can visit the in-game shop to purchase helpful items like potions and power-ups. Whether you're competing, studying, or challenging friends, Dojo Duel turns learning into a game of skill and strategy.</p></div>
+                        <div class="scroll-wrapper">
+        <div class="arrow-container">
+          <div class="dd-arrow left-arrow" onclick="scrollDdScreenshots('left')">&#9664;</div>
+          <div class="dd-screenshots">
+            <img src="Assets/Dojo_duel/dd_welcome_page.PNG" class="dojoDuel-graphic1">
+            <img src="Assets/Dojo_duel/dd_login_page.PNG" class="dojoDuel-graphic1">
+            <img src="Assets/Dojo_duel/dd_profile_screen.PNG" class="dojoDuel-graphic1">
+          </div>
+          <div class="dd-arrow right-arrow" onclick="scrollDdScreenshots('right')">&#9654;</div>
+        </div>
+      </div>
+                        
+
+                  
+                </div>
+            </div>
+
+
             <div class="contact-section" id="contact">
               <h1 class="contact-header">Lets's <span class="chat">chat!</span></h1>
               <p class="email"><span class="email-icon"><i class="fa-solid fa-envelope"></i></span>Lukebelch12@gmail.com</p>
@@ -319,6 +357,8 @@
       });
     });
 
+
+
    
   </script>
   <script>
@@ -327,5 +367,40 @@
       links.classList.toggle('active');
     }
   </script>
+  <script>
+  // Add click event to all screenshot images
+  document.querySelectorAll('.sm-screenshots img').forEach(img => {
+    img.addEventListener('click', () => {
+      const popup = document.getElementById('imagePopup');
+      const popupImg = document.getElementById('popupImage');
+      popupImg.src = img.src;
+      popup.classList.add('active');
+    });
+  });
+
+  function closeImagePopup() {
+    document.getElementById('imagePopup').classList.remove('active');
+  }
+</script>
+
+<script>
+  // Add click event to all screenshot images
+  document.querySelectorAll('.dd-screenshots img').forEach(img => {
+    img.addEventListener('click', () => {
+      const popup = document.getElementById('imagePopup');
+      const popupImg = document.getElementById('popupImage');
+      popupImg.src = img.src;
+      popup.classList.add('active');
+    });
+  });
+
+  function closeImagePopup() {
+    document.getElementById('imagePopup').classList.remove('active');
+  }
+</script>
+
+<div id="imagePopup" class="image-popup-overlay" onclick="closeImagePopup()">
+  <img id="popupImage" src="" alt="Full Size Image" />
+</div>
   </body>
 </html>
